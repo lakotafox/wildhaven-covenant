@@ -97,15 +97,14 @@
     counter.textContent = String(base + n).padStart(6, '0');
   }
 
-  // ---- Animate any progress bars (robust: don't wait on images) ----
+  // ---- Fill progress bars. Set width DIRECTLY (no rAF — it's throttled in
+  //      background/automated tabs and would leave the bar stuck at 0%).
+  //      The CSS `transition` still animates the fill on a visible tab. ----
   function fillBars() {
     document.querySelectorAll('.progress-inner[data-pct]').forEach(function (bar) {
       if (bar.dataset.filled) return;
       bar.dataset.filled = '1';
-      var pct = bar.getAttribute('data-pct');
-      requestAnimationFrame(function () {
-        requestAnimationFrame(function () { bar.style.width = pct + '%'; });
-      });
+      bar.style.width = bar.getAttribute('data-pct') + '%';
     });
   }
   if (document.readyState === 'loading') {
@@ -113,6 +112,9 @@
   } else {
     fillBars();
   }
+  // Belt-and-suspenders: also fill on load in case the script was deferred
+  // past DOMContentLoaded for any reason.
+  window.addEventListener('load', fillBars);
 
   // ---- Guestbook (localStorage, client-side only) ----
   var gbForm = document.getElementById('guestbook-form');
