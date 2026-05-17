@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Field Log — Wildhaven Covenant Preserves</title>
-<meta name="description" content="The Field Log: Wildhaven's protected preserves and the rescued wildlife that lives on or was released into them.">
+<title>The Plan — Wildhaven Covenant</title>
+<meta name="description" content="Exactly how Wildhaven Covenant will be built — the founding roadmap, in order, with no invented numbers.">
 <meta name="theme-color" content="#008080">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23008080'/%3E%3Cpath d='M8 2c2 3 4 4 4 7a4 4 0 1 1-8 0c0-3 2-4 4-7z' fill='%230a6e2e'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/win98.css">
@@ -17,12 +17,12 @@
     <span>Wildhaven.exe</span>
   </a>
   <a class="desktop-icon" href="covenant.html">
-    <svg viewBox="0 0 32 32"><rect x="6" y="3" width="20" height="26" fill="#fffef0" stroke="#808000" stroke-width="2"/><line x1="10" y1="9" x2="22" y2="9" stroke="#808000"/><line x1="10" y1="13" x2="22" y2="13" stroke="#808000"/><line x1="10" y1="17" x2="22" y2="17" stroke="#808000"/></svg>
+    <svg viewBox="0 0 32 32"><rect x="6" y="3" width="20" height="26" fill="#fffef0" stroke="#808000" stroke-width="2"/><line x1="10" y1="9" x2="22" y2="9" stroke="#808000"/><line x1="10" y1="13" x2="22" y2="13" stroke="#808000"/></svg>
     <span>The Covenant</span>
   </a>
   <a class="desktop-icon" href="give.html">
     <svg viewBox="0 0 32 32"><rect x="6" y="12" width="20" height="16" fill="#c8a02e" stroke="#8a6d10" stroke-width="2"/><rect x="6" y="12" width="20" height="5" fill="#e0b93e"/></svg>
-    <span>Give</span>
+    <span>Contribute</span>
   </a>
 </div>
 
@@ -30,7 +30,7 @@
   <div class="title-bar">
     <span class="title-bar-text">
       <svg width="14" height="14" viewBox="0 0 16 16"><path d="M8 2c2 3 4 4 4 7a4 4 0 1 1-8 0c0-3 2-4 4-7z" fill="#7fffb0"/></svg>
-      The Field Log — Wildhaven Explorer
+      The Plan — Wildhaven Covenant
     </span>
     <div class="title-bar-controls">
       <button title="Minimize">_</button>
@@ -43,159 +43,85 @@
   </div>
 
   <div class="window-content" id="top">
-    <h1>The Field Log</h1>
+    <h1>The Plan</h1>
     <p class="lead">
-      Six preserves, 1,840 acres, held in trust forever. Each one is also a place
-      where rescued animals heal. Double-click a preserve to open its file.
+      No preserves exist yet. No animals are in care yet. Here is exactly what
+      Wildhaven will do, in what order, and what your founding contribution
+      pays for first. Every line here is a plan, not a claim.
     </p>
 
     <div class="tabs">
-      <div class="tab active" data-tab="land">&#127795; The Preserves</div>
-      <div class="tab" data-tab="resi">&#129420; Sanctuary Residents</div>
-      <div class="tab" data-tab="log">&#128221; Recent Field Notes</div>
+      <div class="tab active" data-tab="phases">&#128203; Founding Phases</div>
+      <div class="tab" data-tab="first">&#127795; The First Parcel</div>
+      <div class="tab" data-tab="rules">&#9878; The Rules We'll Bind Ourselves To</div>
     </div>
     <div class="tab-content">
 
-      <div class="tab-pane active" data-pane="land">
-        <div class="card-grid">
-          <div class="card">
-            <div class="ico">&#127794;</div>
-            <h3>Cedar Run Preserve</h3>
-            <p><strong>620 ac · fee-simple</strong><br>Riparian forest &amp; beaver wetland. Primary release site for waterfowl &amp; small mammals.</p>
-            <a class="win-button" href="#" onclick="openModal('m-cedar');return false;" style="margin-top:8px;">Open File</a>
-          </div>
-          <div class="card">
-            <div class="ico">&#9968;</div>
-            <h3>Open Hollow</h3>
-            <p><strong>410 ac · easement</strong><br>Working family ranch under permanent conservation easement. Grassland raptor habitat.</p>
-            <a class="win-button" href="#" onclick="openModal('m-hollow');return false;" style="margin-top:8px;">Open File</a>
-          </div>
-          <div class="card">
-            <div class="ico">&#127797;</div>
-            <h3>Thornfield</h3>
-            <p><strong>340 ac · fee-simple</strong><br>Restored pollinator meadow &amp; oak savanna. Lifelong sanctuary pastures.</p>
-            <a class="win-button" href="#" onclick="openModal('m-thorn');return false;" style="margin-top:8px;">Open File</a>
-          </div>
-          <div class="card">
-            <div class="ico">&#127755;</div>
-            <h3>Saltmarsh Reach</h3>
-            <p><strong>260 ac · fee-simple</strong><br>Tidal estuary. Shorebird rehab-and-release; ghost-gear removal base.</p>
-            <a class="win-button" href="#" onclick="openModal('m-salt');return false;" style="margin-top:8px;">Open File</a>
-          </div>
-          <div class="card">
-            <div class="ico">&#128012;</div>
-            <h3>The Understory</h3>
-            <p><strong>140 ac · fee-simple</strong><br>Old-growth fragment. Bat &amp; amphibian refugia — our neglected-taxa work.</p>
-            <a class="win-button" href="#" onclick="openModal('m-under');return false;" style="margin-top:8px;">Open File</a>
-          </div>
-          <div class="card">
-            <div class="ico">&#129413;</div>
-            <h3>Quill Ridge</h3>
-            <p><strong>70 ac · easement</strong><br>First parcel ever protected. Vulture roost &amp; raptor flyway. Where it began.</p>
-            <a class="win-button" href="#" onclick="openModal('m-quill');return false;" style="margin-top:8px;">Open File</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="tab-pane" data-pane="resi">
-        <div class="card-grid">
-          <div class="card"><div class="ico">&#129413;</div><h3>"Judge" — turkey vulture</h3><p>Wing amputee, non-releasable. Permanent resident of Quill Ridge. Keystone scavenger ambassador.</p></div>
-          <div class="card"><div class="ico">&#129417;</div><h3>The Cedar Run beaver clan</h3><p>Not rescued — moved in on their own once we restored the stream. The best outcome there is.</p></div>
-          <div class="card"><div class="ico">&#129420;</div><h3>"Mara" — gray fox</h3><p>Rehabbed from a vehicle strike, released into Thornfield, still seen on trail cams. A success.</p></div>
-          <div class="card"><div class="ico">&#129419;</div><h3>The Saltmarsh flock</h3><p>14 oiled shorebirds cleaned, rehabbed, and released on protected tideland in one season.</p></div>
-          <div class="card"><div class="ico">&#128012;</div><h3>The Understory colony</h3><p>~900 bats in protected old-growth snags. We bought the land so no one could cut them down.</p></div>
-          <div class="card"><div class="ico">&#129426;</div><h3>"Quill" — great horned owl</h3><p>The owl the first preserve is named for. Imprinted, non-releasable, education resident.</p></div>
-        </div>
-      </div>
-
-      <div class="tab-pane" data-pane="log">
+      <div class="tab-pane active" data-pane="phases">
         <div class="fieldset">
-          <span class="fieldset-title">Field Notes</span>
-          <p><strong>Cedar Run —</strong> Planted 400 native willow whips along the run. Beaver activity confirmed within five days. The wetland is rebuilding itself faster than we could.</p>
-          <p><strong>Quill Ridge —</strong> Annual easement monitoring complete. Baseline photo points re-shot. No violations. Vulture roost count up 18%.</p>
-          <p><strong>Saltmarsh Reach —</strong> 220 lbs of derelict crab pot ("ghost gear") pulled from the channel. Two seal entanglements prevented.</p>
-          <p><strong>Thornfield —</strong> Pollinator meadow now self-seeding. "Mara" the gray fox photographed denning. Release counts as permanent.</p>
-          <p><strong>Stewardship —</strong> Endowment for The Understory fully funded. The promise on that parcel is now paid for, forever.</p>
+          <span class="fieldset-title">Phase 0 — Form it right (now)</span>
+          <p style="font-size:11px;">Incorporate as a nonprofit. Adopt bylaws and the Covenant. Seat an independent board (3+ unrelated people). Get an EIN. Decide the tax-deductibility path: secure a <strong>fiscal sponsor</strong> (an existing 501(c)(3) that receives deductible gifts on our behalf) and/or file IRS Form 1023. <em>This is what founding contributions fund.</em></p>
         </div>
+        <div class="fieldset">
+          <span class="fieldset-title">Phase 1 — Endow before we acquire</span>
+          <p style="font-size:11px;">Stand up the stewardship-endowment policy and a legal-defense reserve. The rule is absolute: no parcel is accepted without funding to defend it forever. Register for charitable solicitation in the states where we'll fundraise.</p>
+        </div>
+        <div class="fieldset">
+          <span class="fieldset-title">Phase 2 — The first parcel</span>
+          <p style="font-size:11px;">A single small parcel or one conservation easement &mdash; donated, bargain-sale, or purchased &mdash; with its endowment attached on day one. Proof of concept over scale.</p>
+        </div>
+        <div class="fieldset">
+          <span class="fieldset-title">Phase 3 — Pair land with animals</span>
+          <p style="font-size:11px;">Once protected ground exists and is funded, build the rehab-and-release and lifelong-sanctuary capability on it. Land first, animals onto the land &mdash; never the reverse.</p>
+        </div>
+      </div>
+
+      <div class="tab-pane" data-pane="first">
+        <h3>What "the first parcel" really means</h3>
+        <p style="font-size:11px;">We are not naming preserves we don't own. The first protected land will be chosen by one test: can we hold it <em>and</em> fund its defense <em>forever</em>, starting the day we accept it? If not, we don't take it &mdash; no matter how beautiful.</p>
+        <p style="font-size:11px;">Candidates will most likely be: a donated marginal parcel, a bargain-sale from a conservation-minded owner, or a conservation easement on land someone wants to keep but never wants developed. When there is a real parcel, it will be named here with its real acreage, its real endowment status, and its real monitoring schedule &mdash; and not one day before.</p>
+        <div class="note">If you own land (or know land) that should never be developed, that conversation can start now: <a href="mailto:land@wildhavencovenant.org?subject=Land%20%2F%20easement%20conversation">land@wildhavencovenant.org</a>.</div>
+      </div>
+
+      <div class="tab-pane" data-pane="rules">
+        <ul>
+          <li><strong>Never sell protected land.</strong> Written into the charter and every deed.</li>
+          <li><strong>No parcel without an endowment.</strong> Perpetuity has to be paid for.</li>
+          <li><strong>Reverence in the open, structure underneath.</strong> Secular nonprofit; the belief is cultural, never a tax shield.</li>
+          <li><strong>No private gain.</strong> Independent board, published finances, reasonable-comp policy.</li>
+          <li><strong>Honest numbers only.</strong> Zero is reported as zero. Always.</li>
+        </ul>
+        <p style="font-size:11px;">These are spelled out in <a href="covenant.html">the Stewardship Covenant</a>.</p>
       </div>
 
     </div>
 
-    <div class="note">
-      Preserves, acreages, and residents shown here are illustrative of the model
-      for an organization in formation, not a register of currently held land.
-    </div>
+    <h2>Why fund it before there's anything to see?</h2>
+    <p>
+      Because the difference between a real land trust and a sad story is
+      whether it was formed correctly and funded to keep its promises. The
+      unglamorous founding work &mdash; incorporation, the board, the
+      endowment policy, the tax-deductibility path, state registration &mdash;
+      is the part that makes "forever" true instead of a slogan. That is what
+      a founding contribution buys. Not a logo. The spine.
+    </p>
 
-    <a class="win-button primary" href="give.html">Help Protect More &raquo;</a>
+    <a class="win-button primary" href="give.html">Fund the Founding &raquo;</a>
     <a class="win-button" href="index.html">&laquo; Back to Desktop</a>
+    <a class="win-button" href="covenant.html">Read the Covenant &raquo;</a>
 
     <div class="retro-footer">
-      <p><span class="badge">&#127795; 6 objects</span> <span class="badge">1,840 ac</span> <span class="badge">0 sold</span></p>
-      <p>&copy; 1998&ndash;<span id="yr"></span> Wildhaven Covenant</p>
+      <p><span class="badge">&#128203; The Plan</span> <span class="badge">0 acres yet</span> <span class="badge">honest numbers only</span></p>
+      <p>&copy; <span id="yr"></span> Wildhaven Covenant (in formation)</p>
     </div>
   </div>
 
   <div class="status-bar">
-    <div>6 object(s)</div>
-    <div>1,840 acres held in trust</div>
-    <div>My Computer</div>
+    <div>Plan</div>
+    <div>Nothing built yet — by design, honestly stated</div>
+    <div>In formation</div>
   </div>
 </div>
-
-<!-- Preserve modals -->
-<div class="modal" id="m-cedar"><div class="modal-window">
-  <div class="modal-titlebar"><span class="modal-titlebar-text">Cedar Run Preserve — Properties</span><button class="modal-close" onclick="closeModal('m-cedar')">&#10005;</button></div>
-  <div class="modal-body">
-    <h3>Cedar Run Preserve</h3>
-    <p style="font-size:11px;"><strong>620 acres · fee-simple · acquired via bargain sale</strong></p>
-    <p style="font-size:11px;">A degraded ranch creek bought cheap and let go. We pulled the failing levees, planted willow, and stepped back. Beavers did the rest. Now it's our primary release site for waterfowl, turtles, and small mammals — the animals are released into habitat the trust will hold forever.</p>
-    <p style="font-size:11px;"><strong>Endowment:</strong> funded · <strong>Monitoring:</strong> quarterly · <strong>Public access:</strong> guided only</p>
-  </div></div></div>
-
-<div class="modal" id="m-hollow"><div class="modal-window">
-  <div class="modal-titlebar"><span class="modal-titlebar-text">Open Hollow — Properties</span><button class="modal-close" onclick="closeModal('m-hollow')">&#10005;</button></div>
-  <div class="modal-body">
-    <h3>Open Hollow</h3>
-    <p style="font-size:11px;"><strong>410 acres · conservation easement</strong></p>
-    <p style="font-size:11px;">A fourth-generation family still ranches here. They gave up the right to subdivide and develop, forever; we hold and defend that restriction against every future owner. Proof you can protect land without owning it. Grassland raptors thrive in the un-fragmented sweep.</p>
-    <p style="font-size:11px;"><strong>Endowment:</strong> funded · <strong>Monitoring:</strong> annual baseline re-shoot</p>
-  </div></div></div>
-
-<div class="modal" id="m-thorn"><div class="modal-window">
-  <div class="modal-titlebar"><span class="modal-titlebar-text">Thornfield — Properties</span><button class="modal-close" onclick="closeModal('m-thorn')">&#10005;</button></div>
-  <div class="modal-body">
-    <h3>Thornfield</h3>
-    <p style="font-size:11px;"><strong>340 acres · fee-simple</strong></p>
-    <p style="font-size:11px;">A failed hay operation reseeded to native pollinator meadow and oak savanna. Doubles as lifelong sanctuary pasture for non-releasable grazers and the release site where "Mara" the gray fox went wild again.</p>
-    <p style="font-size:11px;"><strong>Endowment:</strong> funded · <strong>Restoration:</strong> year 4 of 10</p>
-  </div></div></div>
-
-<div class="modal" id="m-salt"><div class="modal-window">
-  <div class="modal-titlebar"><span class="modal-titlebar-text">Saltmarsh Reach — Properties</span><button class="modal-close" onclick="closeModal('m-salt')">&#10005;</button></div>
-  <div class="modal-body">
-    <h3>Saltmarsh Reach</h3>
-    <p style="font-size:11px;"><strong>260 acres · fee-simple · tidal estuary</strong></p>
-    <p style="font-size:11px;">Shorebird rehab-and-release plus a base for pulling derelict fishing gear ("ghost gear") out of the channel. The marsh we protect is the marsh we release birds back into.</p>
-    <p style="font-size:11px;"><strong>Endowment:</strong> funded · <strong>Ghost gear removed:</strong> 220 lbs &amp; counting</p>
-  </div></div></div>
-
-<div class="modal" id="m-under"><div class="modal-window">
-  <div class="modal-titlebar"><span class="modal-titlebar-text">The Understory — Properties</span><button class="modal-close" onclick="closeModal('m-under')">&#10005;</button></div>
-  <div class="modal-body">
-    <h3>The Understory</h3>
-    <p style="font-size:11px;"><strong>140 acres · fee-simple · old-growth fragment</strong></p>
-    <p style="font-size:11px;">Bought specifically so a ~900-bat colony and a vernal-pool amphibian community could not be logged. The neglected-taxa work nobody funds — which is exactly why we do it.</p>
-    <p style="font-size:11px;"><strong>Endowment:</strong> fully funded · <strong>Access:</strong> research only</p>
-  </div></div></div>
-
-<div class="modal" id="m-quill"><div class="modal-window">
-  <div class="modal-titlebar"><span class="modal-titlebar-text">Quill Ridge — Properties</span><button class="modal-close" onclick="closeModal('m-quill')">&#10005;</button></div>
-  <div class="modal-body">
-    <h3>Quill Ridge</h3>
-    <p style="font-size:11px;"><strong>70 acres · conservation easement · the first parcel</strong></p>
-    <p style="font-size:11px;">Where Wildhaven began: one ridge, one easement, one funded endowment, one promise kept. Home to a vulture roost and our education residents "Judge" and "Quill." Small. Permanent. Proof of concept.</p>
-    <p style="font-size:11px;"><strong>Endowment:</strong> funded · <strong>Status:</strong> protected in perpetuity</p>
-  </div></div></div>
 
 <div class="taskbar">
   <button class="start-button">
@@ -204,7 +130,7 @@
   </button>
   <div class="taskbar-tabs">
     <a class="taskbar-tab" href="index.html">&#127794; Wildhaven Covenant</a>
-    <span class="taskbar-tab active">&#127795; The Field Log</span>
+    <span class="taskbar-tab active">&#128203; The Plan</span>
   </div>
   <div class="system-tray">
     <svg width="12" height="12" viewBox="0 0 16 16"><path d="M8 2c2 3 4 4 4 7a4 4 0 1 1-8 0c0-3 2-4 4-7z" fill="#0a6e2e"/></svg>
@@ -217,13 +143,13 @@
   <div class="start-menu-items">
     <a class="start-menu-item" href="index.html">&#127758;&nbsp; Home / Mission</a>
     <a class="start-menu-item" href="covenant.html">&#128220;&nbsp; The Covenant</a>
-    <a class="start-menu-item" href="give.html">&#128176;&nbsp; Give</a>
+    <a class="start-menu-item" href="give.html">&#128176;&nbsp; Contribute</a>
     <hr>
     <a class="start-menu-item" href="#top">&#128190;&nbsp; Back to Top</a>
   </div>
 </div>
 
 <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
-<script src="assets/win98.js?v=2" defer></script>
+<script src="assets/win98.js?v=3" defer></script>
 </body>
 </html>

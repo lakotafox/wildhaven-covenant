@@ -1,0 +1,13 @@
+{
+  "name": "wildhaven-covenant",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Wildhaven Covenant — Win98-themed site for a stewardship land trust in formation. Static site + Netlify Functions for real Stripe founding contributions.",
+  "scripts": {
+    "dev": "netlify dev",
+    "deploy": "netlify deploy --prod --no-build"
+  },
+  "dependencies": {
+    "stripe": "^20.3.1"
+  }
+}

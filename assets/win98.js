@@ -86,16 +86,8 @@
     }
   });
 
-  // ---- Fake-but-stable visitor counter (per browser) ----
-  var counter = document.getElementById('counter');
-  if (counter) {
-    var key = 'wildhaven_visits';
-    var base = 14237;
-    var n = parseInt(localStorage.getItem(key) || '0', 10);
-    n += 1;
-    localStorage.setItem(key, String(n));
-    counter.textContent = String(base + n).padStart(6, '0');
-  }
+  // Visitor counter removed — a fabricated count is mock data, and this site
+  // reports honest numbers only.
 
   // ---- Fill progress bars. Set width DIRECTLY (no rAF — it's throttled in
   //      background/automated tabs and would leave the bar stuck at 0%).
@@ -121,15 +113,16 @@
   if (gbForm) {
     var listEl = document.getElementById('guestbook-list');
     var GB_KEY = 'wildhaven_guestbook';
-    var seed = [
-      { who: 'Marisol R.', where: 'Taos, NM', msg: 'Donated my back five acres. Best decision I ever made. The deer thank you.' },
-      { who: 'Open Hollow Volunteers', where: 'field crew', msg: 'Planted 400 native willow whips along Cedar Run today. Beavers moved in by Friday.' },
-      { who: 'J. Whitethorn', where: 'monthly steward', msg: 'I will never own this land. That is exactly the point. Forever means forever.' }
-    ];
+    // No seeded entries — an empty wall is honestly empty.
     function render() {
       var saved = JSON.parse(localStorage.getItem(GB_KEY) || '[]');
-      var all = saved.concat(seed);
-      listEl.innerHTML = all.map(function (e) {
+      if (!saved.length) {
+        listEl.innerHTML = '<div class="guestbook-entry" style="color:#666;">' +
+          'No signatures yet. If you sign, yours is the first &mdash; ' +
+          'and it stays only in your browser until the organization is formed.</div>';
+        return;
+      }
+      listEl.innerHTML = saved.map(function (e) {
         return '<div class="guestbook-entry"><span class="who">' +
           esc(e.who) + '</span> <em>(' + esc(e.where || 'visitor') + ')</em><br>' +
           esc(e.msg) + '</div>';

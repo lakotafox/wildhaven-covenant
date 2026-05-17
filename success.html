@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank you — Wildhaven Covenant</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#008080">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23008080'/%3E%3Cpath d='M8 2c2 3 4 4 4 7a4 4 0 1 1-8 0c0-3 2-4 4-7z' fill='%230a6e2e'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/assets/win98.css">
+<script src="https://js.stripe.com/v3/"></script>
+<style>
+  body { display:flex; align-items:center; justify-content:center; overflow:auto; }
+  .dialog { width:480px; max-width:94vw; background:var(--silver); border:2px solid;
+    border-color:var(--hi) var(--shadow-lo) var(--shadow-lo) var(--hi); box-shadow:3px 3px 0 #000; }
+  .dialog-body { padding:20px 18px; }
+  .big-ico { font-size:40px; text-align:center; margin-bottom:8px; }
+</style>
+</head>
+<body>
+<div class="dialog">
+  <div class="title-bar">
+    <span class="title-bar-text">
+      <svg width="14" height="14" viewBox="0 0 16 16"><path d="M8 2c2 3 4 4 4 7a4 4 0 1 1-8 0c0-3 2-4 4-7z" fill="#7fffb0"/></svg>
+      Wildhaven Covenant
+    </span>
+    <div class="title-bar-controls"><button onclick="location.href='/'" title="Close">&#10005;</button></div>
+  </div>
+  <div class="dialog-body" id="result">
+    <div class="big-ico">&#8987;</div>
+    <p style="text-align:center;font-size:12px;">Checking your contribution status…</p>
+  </div>
+</div>
+
+<script>
+(function () {
+  var box = document.getElementById('result');
+  function render(icon, title, body, extra) {
+    box.innerHTML =
+      '<div class="big-ico">' + icon + '</div>' +
+      '<h1 style="text-align:center;font-size:17px;">' + title + '</h1>' +
+      '<p style="font-size:12px;text-align:center;">' + body + '</p>' +
+      (extra || '') +
+      '<div style="text-align:center;margin-top:16px;">' +
+      '<a class="win-button primary" href="/">Back to Wildhaven</a> ' +
+      '<a class="win-button" href="/covenant">The Covenant</a></div>';
+  }
+
+  var params = new URLSearchParams(window.location.search);
+  var cs = params.get('payment_intent_client_secret');
+
+  if (!cs) {
+    render('&#9888;', 'Nothing to confirm', 'No payment information was found in this link. If you just contributed, check your email for a Stripe receipt.');
+    return;
+  }
+
+  fetch('/api/payment-config', { cache: 'no-store' })
+    .then(function (r) { return r.json(); })
+    .then(function (cfg) {
+      if (!cfg.publishableKey) throw new Error('config');
+      var stripe = Stripe(cfg.publishableKey);
+      return stripe.retrievePaymentIntent(cs);
+    })
+    .then(function (res) {
+      var pi = res && res.paymentIntent;
+      if (!pi) { render('&#9888;', 'Could not verify', 'We could not read the payment status. Your Stripe email receipt is the source of truth.'); return; }
+      if (pi.status === 'succeeded') {
+        render('&#127794;', 'Thank you, founder.',
+          'Your founding contribution of <strong>$' + (pi.amount / 100).toLocaleString('en-US') + '</strong> went through. ' +
+          'A Stripe receipt is on its way to your email.',
+          '<div class="note" style="margin-top:14px;">This was a <strong>founding contribution</strong> toward forming Wildhaven Covenant ' +
+          '&mdash; <strong>not a tax-deductible charitable donation</strong> (the organization is not yet a 501(c)(3)). ' +
+          'Keep your receipt; we will tell you plainly if/when contributions become tax-deductible.</div>');
+      } else if (pi.status === 'processing') {
+        render('&#8987;', 'Payment processing', 'Your contribution is processing. You\'ll get a Stripe email receipt once it settles.');
+      } else if (pi.status === 'requires_payment_method') {
+        render('&#10060;', 'Payment not completed', 'That payment didn\'t go through and you were not charged. You can try again.',
+          '<div style="text-align:center;margin-top:8px;"><a class="win-button" href="/give">Try again</a></div>');
+      } else {
+        render('&#9888;', 'Status: ' + pi.status, 'Check your email for a Stripe receipt for the definitive status.');
+      }
+    })
+    .catch(function () {
+      render('&#9888;', 'Could not verify right now', 'Your Stripe email receipt is the source of truth for whether the contribution succeeded.');
+    });
+})();
+</script>
+</body>
+</html>

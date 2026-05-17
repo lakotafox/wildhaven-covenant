@@ -1,5 +1,9 @@
 [build]
   publish = "."
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
 
 [[headers]]
   for = "/*"
@@ -8,6 +12,16 @@
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[redirects]]
+  from = "/api/create-payment-intent"
+  to = "/.netlify/functions/create-payment-intent"
+  status = 200
+
+[[redirects]]
+  from = "/api/payment-config"
+  to = "/.netlify/functions/payment-config"
+  status = 200
 
 [[redirects]]
   from = "/covenant"
@@ -21,5 +35,10 @@
 
 [[redirects]]
   from = "/give"
+  to = "/give.html"
+  status = 200
+
+[[redirects]]
+  from = "/contribute"
   to = "/give.html"
   status = 200

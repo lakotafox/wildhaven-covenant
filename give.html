@@ -3,11 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ways to Give — Wildhaven Covenant</title>
-<meta name="description" content="Give to Wildhaven Covenant: fund acres and endowments, donate land or an easement, or join a stewardship field crew.">
+<title>Make a Founding Contribution — Wildhaven Covenant</title>
+<meta name="description" content="Fund the founding of Wildhaven Covenant. A founding contribution helps form the organization correctly. It is not a tax-deductible donation yet — here is how that changes.">
 <meta name="theme-color" content="#008080">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23008080'/%3E%3Cpath d='M8 2c2 3 4 4 4 7a4 4 0 1 1-8 0c0-3 2-4 4-7z' fill='%230a6e2e'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/win98.css">
+<script src="https://js.stripe.com/v3/"></script>
 </head>
 <body>
 
@@ -22,7 +23,7 @@
   </a>
   <a class="desktop-icon" href="preserves.html">
     <svg viewBox="0 0 32 32"><rect x="2" y="20" width="28" height="10" fill="#0a6e2e"/><path d="M10 20l-5 0 5-12 5 12z" fill="#157a36"/><path d="M22 20l-6 0 6-14 6 14z" fill="#0d8a3a"/></svg>
-    <span>The Preserves</span>
+    <span>The Plan</span>
   </a>
 </div>
 
@@ -30,7 +31,7 @@
   <div class="title-bar">
     <span class="title-bar-text">
       <svg width="14" height="14" viewBox="0 0 16 16"><path d="M8 2c2 3 4 4 4 7a4 4 0 1 1-8 0c0-3 2-4 4-7z" fill="#7fffb0"/></svg>
-      Ways to Give — Wildhaven Covenant
+      Make a Founding Contribution — Wildhaven Covenant
     </span>
     <div class="title-bar-controls">
       <button title="Minimize">_</button>
@@ -43,103 +44,137 @@
   </div>
 
   <div class="window-content" id="top">
-    <h1>Outlive yourself.</h1>
+    <h1>Fund the founding.</h1>
     <p class="lead">
-      Most giving rents impact for a few years. A gift to Wildhaven buys
-      <strong>permanence</strong> — land protected forever, with a funded
-      endowment so the promise survives all of us. Pick a way in.
+      There is no land yet, and we won't pretend there is. A founding
+      contribution pays for the unglamorous, essential work of forming
+      Wildhaven Covenant <em>correctly</em> &mdash; so that when it does hold
+      land, "forever" is true.
     </p>
 
-    <div class="tabs">
-      <div class="tab active" data-tab="money">&#128176; Give Funds</div>
-      <div class="tab" data-tab="land">&#127796; Donate Land</div>
-      <div class="tab" data-tab="volunteer">&#129366; Steward</div>
-    </div>
-    <div class="tab-content">
-
-      <div class="tab-pane active" data-pane="money" id="money">
-        <h3>Fund acres &amp; endowments</h3>
-        <p style="font-size:11px;">Tax-deductible to the extent allowed by law. Every gift is split: part buys/protects land, part feeds the stewardship endowment that defends it forever.</p>
-        <div class="card-grid">
-          <div class="card"><div class="ico">&#127793;</div><h3>$25 — Seedling</h3><p>Native plants for a restoration plot.</p></div>
-          <div class="card"><div class="ico">&#127795;</div><h3>$120 — One Acre, Watched</h3><p>A year of monitoring on one protected acre.</p></div>
-          <div class="card"><div class="ico">&#127794;</div><h3>$1,000 — Endowed Acre</h3><p>Endows an acre's defense in perpetuity.</p></div>
-          <div class="card"><div class="ico">&#128737;</div><h3>Monthly — Steward Circle</h3><p>Recurring gift; the most useful kind.</p></div>
-        </div>
-        <p style="font-size:11px;"><strong>Founding phase:</strong> until our payment processing is live, pledge by email and we'll confirm your founding-steward standing personally.</p>
-        <a class="win-button primary" href="mailto:hello@wildhavencovenant.org?subject=I%20want%20to%20give">Pledge a Gift &raquo;</a>
-      </div>
-
-      <div class="tab-pane" data-pane="land" id="land">
-        <h3>Donate land — or an easement on land you love</h3>
-        <p style="font-size:11px;">The single highest-impact thing most people can do. Two ways:</p>
-        <div class="fieldset">
-          <span class="fieldset-title">Outright land gift</span>
-          <p style="font-size:11px;">Give us the parcel. We hold it forever, fund its endowment, and you may receive a charitable deduction for its appraised value. Your land is removed from the market permanently.</p>
-        </div>
-        <div class="fieldset">
-          <span class="fieldset-title">Conservation easement</span>
-          <p style="font-size:11px;">Keep your land, keep living on it — permanently give up the right to develop or subdivide it. We hold and defend that restriction forever, including against future owners.</p>
-        </div>
-        <div class="note">Land and easement gifts have real tax and legal consequences and require independent appraisal and counsel. We'll walk it through with you; we don't give you tax advice.</div>
-        <a class="win-button primary" href="mailto:land@wildhavencovenant.org?subject=Land%20%2F%20easement%20gift">Talk to us about land &raquo;</a>
-      </div>
-
-      <div class="tab-pane" data-pane="volunteer" id="volunteer">
-        <h3>Join a stewardship field crew</h3>
-        <p style="font-size:11px;">Restraint is most of the work, but not all of it. Crews do:</p>
-        <ul>
-          <li>Native planting &amp; invasive removal</li>
-          <li>Easement monitoring &amp; baseline photo points</li>
-          <li>Wildlife release support &amp; trail-cam checks</li>
-          <li>Ghost-gear pulls at Saltmarsh Reach</li>
-          <li>Records, mapping, and the unglamorous forever-paperwork</li>
-        </ul>
-        <a class="win-button primary" href="mailto:hello@wildhavencovenant.org?subject=Volunteer%20%2F%20field%20crew">Sign up to steward &raquo;</a>
-      </div>
-
+    <div class="note" style="background:#ffe9c7;border:2px solid #c8881e;">
+      <strong>Read this first &mdash; it's important and honest.</strong><br>
+      Wildhaven Covenant is <strong>not yet incorporated</strong> and
+      <strong>not yet a 501(c)(3)</strong>. A contribution made here is a
+      <strong>founding contribution to help establish the organization</strong>.
+      It is <strong>NOT a tax-deductible charitable donation</strong>, and we
+      will never tell you otherwise. Payment is processed securely by Stripe.
+      How this becomes tax-deductible is explained at the bottom of this page.
     </div>
 
-    <h2>Sign the Covenant — Guestbook</h2>
-    <p style="font-size:11px;">Leave your mark. Why does forever matter to you? (Saved in your browser; this is a founding-phase placeholder for the real registry.)</p>
+    <!-- ===== Step 1: amount ===== -->
+    <div id="step-amount">
+      <h2>1. Choose an amount</h2>
+      <div class="card-grid" id="amount-grid">
+        <div class="card amount-opt" data-amt="25"><div class="ico">&#127793;</div><h3>$25</h3><p>A seedling toward incorporation.</p></div>
+        <div class="card amount-opt" data-amt="60"><div class="ico">&#127807;</div><h3>$60</h3><p>Helps cover filing &amp; registration fees.</p></div>
+        <div class="card amount-opt" data-amt="150"><div class="ico">&#127795;</div><h3>$150</h3><p>Founding board &amp; bylaws groundwork.</p></div>
+        <div class="card amount-opt" data-amt="500"><div class="ico">&#127794;</div><h3>$500</h3><p>Toward the first stewardship endowment.</p></div>
+      </div>
+      <div class="field-row" style="flex-direction:row;align-items:flex-end;gap:10px;flex-wrap:wrap;">
+        <div class="field-row" style="flex:1;min-width:140px;">
+          <label for="custom-amt">Or enter any amount (USD)</label>
+          <input type="text" id="custom-amt" inputmode="decimal" placeholder="e.g. 75" autocomplete="off">
+        </div>
+        <button class="win-button primary" id="to-details" type="button">Continue &raquo;</button>
+      </div>
+      <p id="amount-error" style="color:#b00;font-size:11px;display:none;"></p>
+    </div>
+
+    <!-- ===== Step 2: details ===== -->
+    <div id="step-details" style="display:none;">
+      <h2>2. Your details</h2>
+      <p style="font-size:12px;">Contributing <strong id="amt-echo">$0</strong> as a founding contribution (not tax-deductible).</p>
+      <div class="field-row"><label for="cname">Name (optional)</label><input type="text" id="cname" maxlength="120" placeholder="So we can thank you"></div>
+      <div class="field-row"><label for="cemail">Email (for your receipt)</label><input type="email" id="cemail" maxlength="200" placeholder="you@example.com"></div>
+      <button class="win-button primary" id="to-pay" type="button">Continue to secure payment &raquo;</button>
+      <button class="win-button" id="back-amount" type="button">&laquo; Back</button>
+      <p id="details-error" style="color:#b00;font-size:11px;display:none;"></p>
+    </div>
+
+    <!-- ===== Step 3: payment ===== -->
+    <div id="step-pay" style="display:none;">
+      <h2>3. Payment</h2>
+      <div class="fieldset">
+        <span class="fieldset-title">Secure card payment (Stripe)</span>
+        <form id="payment-form">
+          <div id="payment-element" style="margin:8px 0;min-height:40px;"></div>
+          <button class="win-button primary" id="submit-pay" type="submit">Contribute <span id="pay-amt"></span></button>
+          <button class="win-button" id="back-details" type="button">&laquo; Back</button>
+          <p id="pay-message" style="font-size:11px;margin-top:8px;"></p>
+        </form>
+      </div>
+      <p style="font-size:11px;color:#555;">Card details go straight to Stripe over TLS. This site and its owner never see or store your card number.</p>
+    </div>
+
+    <!-- ===== Not-configured state (honest, no fake) ===== -->
+    <div id="step-unconfigured" style="display:none;">
+      <h2>Payments are being switched on</h2>
+      <div class="note">
+        The secure payment processor for Wildhaven's <em>own</em> account isn't
+        live yet (we will not route founding contributions through anyone
+        else's account). Until it is, pledge by email and we'll confirm your
+        founding-contributor standing personally &mdash; no money changes hands
+        until it can be done correctly.
+      </div>
+      <a class="win-button primary" href="mailto:hello@wildhavencovenant.org?subject=Founding%20contribution%20pledge">Pledge by email</a>
+    </div>
+
+    <h2>How this becomes tax-deductible</h2>
+    <p style="font-size:12px;">We're not hiding the ball. There are exactly two honest routes, and founding contributions pay to walk them:</p>
+    <div class="fieldset">
+      <span class="fieldset-title">Route A — Fiscal sponsor (fast, legitimate)</span>
+      <p style="font-size:11px;">An existing 501(c)(3) "fiscal sponsor" agrees to receive tax-deductible gifts on Wildhaven's behalf for a small fee while Wildhaven operates as a project under them. This is a well-established, fully legal model &mdash; donors get deductibility now, through the sponsor.</p>
+    </div>
+    <div class="fieldset">
+      <span class="fieldset-title">Route B — Incorporate + IRS 1023</span>
+      <p style="font-size:11px;">Incorporate as a nonprofit, get an EIN, adopt bylaws/board, file IRS Form 1023 for 501(c)(3) status, and register for charitable solicitation in each state we fundraise in. Once the IRS determination letter is issued, gifts are deductible directly.</p>
+    </div>
+    <div class="note">When either route is complete, this page will say so plainly and the wording will change to "tax-deductible donation" &mdash; not one day before. Until then: founding contribution, full stop.</div>
+
+    <h2>The Founders' Wall</h2>
+    <p style="font-size:11px;">Optional. Leave a note about why permanence matters to you. Stored only in your own browser for now &mdash; it becomes a real registry once the organization is formed. No fake entries seeded; if it's empty, it's empty.</p>
     <form id="guestbook-form">
       <div class="field-row" style="flex-direction:row;gap:10px;">
         <div class="field-row" style="flex:1;"><label for="gb-who">Name</label><input type="text" id="gb-who" name="who" maxlength="40" placeholder="Your name"></div>
         <div class="field-row" style="flex:1;"><label for="gb-where">Where</label><input type="text" id="gb-where" name="where" maxlength="40" placeholder="Town / role"></div>
       </div>
-      <div class="field-row"><label for="gb-msg">Your message</label><textarea id="gb-msg" name="msg" maxlength="280" placeholder="Why forever matters to you..."></textarea></div>
-      <button type="submit" class="win-button primary">Sign the Guestbook</button>
+      <div class="field-row"><label for="gb-msg">Your note</label><textarea id="gb-msg" name="msg" maxlength="280" placeholder="Why forever matters to you..."></textarea></div>
+      <button type="submit" class="win-button primary">Sign the Wall</button>
     </form>
     <div class="fieldset" style="margin-top:14px;">
-      <span class="fieldset-title">Stewards' Guestbook</span>
+      <span class="fieldset-title">Founders' Wall</span>
       <div id="guestbook-list"></div>
     </div>
 
     <h2>FAQ</h2>
-    <div class="fieldset"><span class="fieldset-title">Is this a church? Is it a tax dodge?</span>
-      <p style="font-size:11px;">No. Wildhaven is described as a secular 501(c)(3) public charity (conservation + prevention of cruelty to animals). The earth-reverent identity is real and public, but it is never used as a tax shield. Reverence in the open; boring structure underneath. See Article V of the <a href="covenant.html">Covenant</a>.</p></div>
-    <div class="fieldset"><span class="fieldset-title">What does "forever" actually mean?</span>
-      <p style="font-size:11px;">Deed restrictions, perpetual conservation easements, a charter ban on selling protected land, and a funded stewardship endowment per parcel for monitoring and legal defense after the founders are gone.</p></div>
-    <div class="fieldset"><span class="fieldset-title">Why pair land with animals?</span>
-      <p style="font-size:11px;">Because protected land needs defenders and rescued animals need protected land. Splitting them weakens both. See <a href="covenant.html">Article III</a>.</p></div>
-    <div class="fieldset"><span class="fieldset-title">Is my gift tax-deductible?</span>
-      <p style="font-size:11px;">Cash and land gifts to a qualified 501(c)(3) are generally deductible to the extent allowed by law; land/easement gifts require independent appraisal and counsel. We are in formation — confirm specifics with your own advisor.</p></div>
+    <div class="fieldset"><span class="fieldset-title">Is my contribution tax-deductible?</span>
+      <p style="font-size:11px;">No &mdash; not yet. Wildhaven is not yet a 501(c)(3). It's a founding contribution toward forming the organization. See the two routes above for how/when that changes.</p></div>
+    <div class="fieldset"><span class="fieldset-title">Where does the money go?</span>
+      <p style="font-size:11px;">Incorporation and filing fees, the 1023 / fiscal-sponsor process, state charitable-solicitation registration, and the first stewardship endowment. The unglamorous spine that makes "forever" real.</p></div>
+    <div class="fieldset"><span class="fieldset-title">Is this a church or a tax dodge?</span>
+      <p style="font-size:11px;">No. It is intended to be a secular nonprofit. The earth-reverent identity is cultural and lives in <a href="covenant.html">the Covenant</a> &mdash; never used as a tax shield. See Article V.</p></div>
+    <div class="fieldset"><span class="fieldset-title">Can I give monthly?</span>
+      <p style="font-size:11px;">Recurring giving turns on once the organization is formed and the dedicated nonprofit account is live. For now: a one-time founding contribution, or email us to be contacted when recurring opens.</p></div>
 
-    <div class="note">This is a concept &amp; outreach site for an organization in formation. Nothing here is legal, tax, or financial advice.</div>
+    <div class="note">
+      Nothing on this page is legal, tax, or financial advice, and nothing here
+      is a charitable solicitation by a registered charity. Wildhaven Covenant
+      is an organization in formation.
+    </div>
 
     <a class="win-button" href="index.html">&laquo; Back to Desktop</a>
     <a class="win-button" href="covenant.html">Read the Covenant &raquo;</a>
 
     <div class="retro-footer">
-      <p><span class="badge">&#128176; founding phase</span> <span class="badge">501(c)(3) in formation</span> <span class="badge">no trackers</span></p>
-      <p>You are visitor <span class="counter" id="counter">000000</span></p>
-      <p>&copy; 1998&ndash;<span id="yr"></span> Wildhaven Covenant</p>
+      <p><span class="badge">&#128176; founding phase</span> <span class="badge">NOT tax-deductible yet</span> <span class="badge">&#128274; Stripe / TLS</span></p>
+      <p>&copy; <span id="yr"></span> Wildhaven Covenant (in formation)</p>
     </div>
   </div>
 
   <div class="status-bar">
-    <div>Ready</div>
-    <div>Tax-deductible to the extent allowed by law</div>
+    <div id="sb-status">Checking payments…</div>
+    <div>Founding contribution — not a tax-deductible donation</div>
     <div>Secure</div>
   </div>
 </div>
@@ -151,7 +186,7 @@
   </button>
   <div class="taskbar-tabs">
     <a class="taskbar-tab" href="index.html">&#127794; Wildhaven Covenant</a>
-    <span class="taskbar-tab active">&#128176; Ways to Give</span>
+    <span class="taskbar-tab active">&#128176; Founding Contribution</span>
   </div>
   <div class="system-tray">
     <svg width="12" height="12" viewBox="0 0 16 16"><path d="M8 2c2 3 4 4 4 7a4 4 0 1 1-8 0c0-3 2-4 4-7z" fill="#0a6e2e"/></svg>
@@ -164,13 +199,14 @@
   <div class="start-menu-items">
     <a class="start-menu-item" href="index.html">&#127758;&nbsp; Home / Mission</a>
     <a class="start-menu-item" href="covenant.html">&#128220;&nbsp; The Covenant</a>
-    <a class="start-menu-item" href="preserves.html">&#127795;&nbsp; The Preserves</a>
+    <a class="start-menu-item" href="preserves.html">&#128203;&nbsp; The Plan</a>
     <hr>
     <a class="start-menu-item" href="#top">&#128190;&nbsp; Back to Top</a>
   </div>
 </div>
 
 <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
-<script src="assets/win98.js?v=2" defer></script>
+<script src="assets/checkout.js" defer></script>
+<script src="assets/win98.js?v=3" defer></script>
 </body>
 </html>
