@@ -1,0 +1,25 @@
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[redirects]]
+  from = "/covenant"
+  to = "/covenant.html"
+  status = 200
+
+[[redirects]]
+  from = "/preserves"
+  to = "/preserves.html"
+  status = 200
+
+[[redirects]]
+  from = "/give"
+  to = "/give.html"
+  status = 200
