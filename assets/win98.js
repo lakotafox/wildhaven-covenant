@@ -97,13 +97,22 @@
     counter.textContent = String(base + n).padStart(6, '0');
   }
 
-  // ---- Animate any progress bars on load ----
-  window.addEventListener('load', function () {
+  // ---- Animate any progress bars (robust: don't wait on images) ----
+  function fillBars() {
     document.querySelectorAll('.progress-inner[data-pct]').forEach(function (bar) {
+      if (bar.dataset.filled) return;
+      bar.dataset.filled = '1';
       var pct = bar.getAttribute('data-pct');
-      requestAnimationFrame(function () { bar.style.width = pct + '%'; });
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () { bar.style.width = pct + '%'; });
+      });
     });
-  });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', fillBars);
+  } else {
+    fillBars();
+  }
 
   // ---- Guestbook (localStorage, client-side only) ----
   var gbForm = document.getElementById('guestbook-form');

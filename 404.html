@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Error — Wildhaven Covenant</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#008080">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23008080'/%3E%3Cpath d='M8 2c2 3 4 4 4 7a4 4 0 1 1-8 0c0-3 2-4 4-7z' fill='%230a6e2e'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/assets/win98.css">
+<style>
+  body { display:flex; align-items:center; justify-content:center; overflow:auto; }
+  .dialog {
+    width: 420px; max-width: 92vw;
+    background: var(--silver);
+    border: 2px solid;
+    border-color: var(--hi) var(--shadow-lo) var(--shadow-lo) var(--hi);
+    box-shadow: 3px 3px 0 #000;
+  }
+  .dialog .title-bar { padding: 4px 5px; }
+  .dialog-body { padding: 20px 18px; display:flex; gap:16px; align-items:flex-start; }
+  .err-ico {
+    width:38px;height:38px;border-radius:50%;flex:none;
+    background:#d8000c;color:#fff;font-weight:bold;font-size:26px;
+    display:flex;align-items:center;justify-content:center;
+    border:2px solid; border-color:#ff6b6b #7a0007 #7a0007 #ff6b6b;
+  }
+  .dialog-body p { font-size:12px; margin:0 0 8px; }
+  .dialog-actions {
+    display:flex; gap:8px; justify-content:center;
+    padding:0 18px 18px; flex-wrap:wrap;
+  }
+</style>
+</head>
+<body>
+<div class="dialog">
+  <div class="title-bar">
+    <span class="title-bar-text">
+      <svg width="14" height="14" viewBox="0 0 16 16"><path d="M8 2c2 3 4 4 4 7a4 4 0 1 1-8 0c0-3 2-4 4-7z" fill="#7fffb0"/></svg>
+      Wildhaven Covenant
+    </span>
+    <div class="title-bar-controls"><button onclick="location.href='/'" title="Close">&#10005;</button></div>
+  </div>
+  <div class="dialog-body">
+    <div class="err-ico">&times;</div>
+    <div>
+      <p><strong>Error 404 — This page could not be found.</strong></p>
+      <p>The land is still here. This page is not. It may have moved, or it never existed (much like the deed restrictions we promise: permanent things only).</p>
+      <p style="color:var(--shadow-lo);">WILDHAVEN.EXE caused a navigation fault in module PAGE.DLL.</p>
+    </div>
+  </div>
+  <div class="dialog-actions">
+    <a class="win-button primary" href="/">&#127968; Home</a>
+    <a class="win-button" href="/covenant">&#128220; The Covenant</a>
+    <a class="win-button" href="/preserves">&#127795; The Preserves</a>
+    <a class="win-button" href="/give">&#128176; Give</a>
+  </div>
+</div>
+</body>
+</html>
